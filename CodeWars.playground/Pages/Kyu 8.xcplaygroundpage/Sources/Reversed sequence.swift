@@ -6,6 +6,7 @@
 
 // MARK: Solution
 
+/// - My solution
 public func reverseSeq(n: Int) -> [Int] {
     var arr: [Int] = []
     for i in 0..<n {
@@ -14,6 +15,7 @@ public func reverseSeq(n: Int) -> [Int] {
     return arr
 }
 
+/// - Best practices solution
 func reverseSeqBP(n: Int) -> [Int] {
     return (1...n).reversed()
 }

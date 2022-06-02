@@ -8,6 +8,7 @@
 
 // MARK: Solution
 
+/// - My solution
 public func sumOfPositives(_ numbers: [Int] ) -> Int {
     var positiveNumbers: [Int] = []
     for i in numbers {
@@ -16,6 +17,7 @@ public func sumOfPositives(_ numbers: [Int] ) -> Int {
     return positiveNumbers.reduce(0, +)
 }
 
+/// - Best practices solution
 func sumOfPositivesBP(_ numbers: [Int] ) -> Int {
     return numbers.filter{ $0 > 0 }.reduce(0, +)
 }

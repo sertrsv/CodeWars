@@ -1,4 +1,4 @@
-//: [Previous](@previous)
+//: [Kyu 8](@previous)
 
 import XCTest
 
@@ -11,4 +11,4 @@ for test in kyu7tests {
     test.defaultTestSuite.run()
 }
 
-//: [Next](@next)
+//: [Kyu 6](@next)

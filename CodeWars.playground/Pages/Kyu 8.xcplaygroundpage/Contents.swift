@@ -11,3 +11,4 @@ for test in kyu8tests {
     test.defaultTestSuite.run()
 }
 
+//: [Kyu 7](@next)
