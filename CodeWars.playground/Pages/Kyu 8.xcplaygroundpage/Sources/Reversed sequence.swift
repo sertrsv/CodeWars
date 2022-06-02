@@ -27,7 +27,7 @@ public class ReversedSequenceTest: XCTestCase {
     static var allTests = [
         ("Test n 5", testN5),
         ("Test n 100", testN100),
-        ("Random input test", randomTest)
+        ("Random input test", testRandom)
     ]
     
     func testN5() {
@@ -40,17 +40,18 @@ public class ReversedSequenceTest: XCTestCase {
         XCTAssertEqual(expectedResult, reverseSeq(n: 100))
     }
     
-    func randomTest() {
+    func testRandom() {
         let randomInput = generateRandomInput()
         let expectedResult = solution(n: randomInput)
         XCTAssertEqual(reverseSeq(n: randomInput), expectedResult)
     }
-}
+    
+    private func solution(n: Int) -> [Int] {
+        return (1...n).map { $0 }.reversed()
+    }
 
-func solution(n: Int) -> [Int] {
-    return (1...n).map { $0 }.reversed()
-}
+    private func generateRandomInput() -> Int {
+        return (10...1000).randomElement()!
+    }
 
-func generateRandomInput() -> Int {
-    return (10...1000).randomElement()!
 }

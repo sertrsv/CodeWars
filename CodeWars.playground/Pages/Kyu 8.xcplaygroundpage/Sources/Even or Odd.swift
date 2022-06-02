@@ -35,11 +35,11 @@ public class EvenOrOddTest: XCTestCase {
         XCTAssertEqual(evenOrOdd(74156741),"Odd")
         XCTAssertEqual(evenOrOdd(100000),"Even")
         
-        let ernd = { return Int(25 + arc4random() % (25)) * 2 }
+        let ernd = { return Int(25 + Int.random(in: 0...25)) * 2 }
         let ornd = { return ernd() + 1 }
         
         for _ in 0..<6 {
-            if (arc4random() % 100 < 50) {
+            if Int.random(in: 0...100) < 50 {
                 let x = ernd()
                 XCTAssertEqual(evenOrOdd(x), "Even", "evenOrOdd(\(x))")
             } else {

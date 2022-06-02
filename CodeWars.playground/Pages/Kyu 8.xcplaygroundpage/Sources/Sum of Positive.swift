@@ -8,7 +8,7 @@
 
 // MARK: Solution
 
-public func sumOfPositives (_ numbers: [Int] ) -> Int {
+public func sumOfPositives(_ numbers: [Int] ) -> Int {
     var positiveNumbers: [Int] = []
     for i in numbers {
         i > 0 ? positiveNumbers.append(i) : nil
@@ -29,7 +29,7 @@ public class SumOfPositiveTest: XCTestCase {
         ("Works for some examples", testExample),
         ("Returns 0 when array is empty", testEmptyArray),
         ("Returns 0 when all elements are negative", testAllNegatives),
-        ("Works for random arrays", randomTests)
+        ("Works for random arrays", testRandom)
     ]
     
     func testExample() {
@@ -46,7 +46,7 @@ public class SumOfPositiveTest: XCTestCase {
         XCTAssertEqual(sumOfPositives([-1,-2,-3,-4,-5]), 0);
     }
     
-    func randomTests() {
+    func testRandom() {
         
         func sumOfPositivesSolution (_ numbers: [Int] ) -> Int {
             
@@ -59,15 +59,13 @@ public class SumOfPositiveTest: XCTestCase {
             return total
         }
         
-        let randomSize = { return Int(arc4random() % 20) }
-        
         func makeList(_ n: Int) -> [Int] {
-            return (0..<n).map{ _ in Int(arc4random() % 40 - 20) }
+            return (0..<n).map{ _ in Int.random(in: -20...20) }
         }
         
         for _ in 1...100 {
-            let n = randomSize();
-            let list = makeList(n);
+            let n = Int.random(in: 0...20)
+            let list = makeList(n)
             let expected = sumOfPositivesSolution(list)
             let actual = sumOfPositives(list)
             XCTAssertEqual(actual, expected, "It should work for \(list)")

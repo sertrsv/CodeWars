@@ -58,7 +58,7 @@ public class StringyStringsTest: XCTestCase {
     
     func testRandom() {
         (0..<250).forEach { _ in
-            let value = max(arc4random() % 100, 1)
+            let value = max(Int.random(in: 0...100), 1)
             XCTAssertEqual(stringy(Int(value)), testStringy(Int(value)))
         }
     }
