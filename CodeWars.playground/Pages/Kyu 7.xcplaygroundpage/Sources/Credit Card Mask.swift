@@ -24,7 +24,7 @@
 
 // MARK: Solution
 
-/// - My solution
+/// My solution
 public func maskify(_ string: String) -> String {
     var newStr: String = string
     if string.count > 4 {
@@ -38,9 +38,9 @@ public func maskify(_ string: String) -> String {
     return newStr
 }
 
-/// - Clever solution
+/// Clever solution
 func maskifyC(_ string: String) -> String {
-  string.enumerated().map { $0 < string.count - 4 ? "#" : "\($1)"}.joined()
+    string.enumerated().map { $0 < string.count - 4 ? "#" : "\($1)"}.joined()
 }
 
 // MARK: Tests
@@ -53,7 +53,7 @@ private extension String {
         let end = index(startIndex, offsetBy: bounds.upperBound)
         return String(self[start...end])
     }
-
+    
     subscript (bounds: CountableRange<Int>) -> String {
         let start = index(startIndex, offsetBy: bounds.lowerBound)
         let end = index(startIndex, offsetBy: bounds.upperBound)
@@ -78,15 +78,15 @@ public class CreditCardMaskTest: XCTestCase {
             let str = randomString(length: .random(in: 0...50))
             let actual = maskify(str)
             let expectedString = str.enumerated().map {
-              $0 + 4 >= str.count ? String($1) : "#"
+                $0 + 4 >= str.count ? String($1) : "#"
             }.joined()
             XCTAssertEqual(actual, expectedString, "Test failed using \(str). Expected \(expectedString) but got \(actual)")
         }
     }
-  
+    
     private func randomString(length: Int) -> String {
-      let letters = Array("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789")
-      return String((0..<length).compactMap{ _ in letters.randomElement() })
+        let letters = Array("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789")
+        return String((0..<length).compactMap{ _ in letters.randomElement() })
     }
 }
 

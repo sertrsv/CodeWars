@@ -10,7 +10,7 @@
 
 // MARK: Solution
 
-/// - My solution
+/// My solution
 public func sumOfTwoSmallestIntegersIn(_ array: [Int]) -> Int {
     var newArray = array
     let minE: Int? = newArray.min()
@@ -21,12 +21,12 @@ public func sumOfTwoSmallestIntegersIn(_ array: [Int]) -> Int {
     return minE! + minE2!
 }
 
-/// - Clever solution
+/// Clever solution
 func sumOfTwoSmallestIntegersInC(_ array: [Int]) -> Int {
     return array.sorted()[0...1].reduce(0, +)
 }
 
-/// - Best practices solution
+/// Best practices solution
 func sumOfTwoSmallestIntegersInBP(_ array: [Int]) -> Int {
     let sort = array.sorted()
     return sort[0] + sort[1]

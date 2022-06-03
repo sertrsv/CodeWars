@@ -14,7 +14,7 @@
 
 // MARK: Solution
 
-/// - My solution
+/// My solution
 public func stringy(_ size: Int) -> String {
     var str = ""
     for i in 1...size {
@@ -23,7 +23,7 @@ public func stringy(_ size: Int) -> String {
     return str
 }
 
-/// - Clever solution
+/// Clever solution
 func stringyC(_ size: Int) -> String {
     return (0..<size).map { $0 % 2 == 0 ? "1" : "0" }.joined()
 }

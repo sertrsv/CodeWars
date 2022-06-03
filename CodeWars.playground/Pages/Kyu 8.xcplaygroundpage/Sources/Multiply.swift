@@ -4,12 +4,12 @@
 
 // MARK: Solution
 
-/// - My solution
+/// My solution
 public func multiply(_ a: Double, _ b: Double) -> Double {
     return a * b
 }
 
-/// - Clever solution
+/// Clever solution
 let multiplyC: (Double, Double) -> Double = { $0 * $1 }
 
 // MARK: Tests

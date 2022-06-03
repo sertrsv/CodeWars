@@ -4,12 +4,12 @@
 
 // MARK: Solution
 
-/// - My solution
+/// My solution
 public func evenOrOdd(_ number: Int) -> String {
     return (number % 2 == 0) ? "Even" : "Odd"
 }
 
-/// - Best practices solution
+/// Best practices solution
 func evenOrOddBP(_ number: Int) -> String {
     return number % 2 == 0 ? "Even" : "Odd"
 }

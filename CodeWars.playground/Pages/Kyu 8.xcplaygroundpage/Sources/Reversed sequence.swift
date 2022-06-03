@@ -6,7 +6,7 @@
 
 // MARK: Solution
 
-/// - My solution
+/// My solution
 public func reverseSeq(n: Int) -> [Int] {
     var arr: [Int] = []
     for i in 0..<n {
@@ -15,7 +15,7 @@ public func reverseSeq(n: Int) -> [Int] {
     return arr
 }
 
-/// - Best practices solution
+/// Best practices solution
 func reverseSeqBP(n: Int) -> [Int] {
     return (1...n).reversed()
 }
@@ -51,9 +51,9 @@ public class ReversedSequenceTest: XCTestCase {
     private func solution(n: Int) -> [Int] {
         return (1...n).map { $0 }.reversed()
     }
-
+    
     private func generateRandomInput() -> Int {
         return (10...1000).randomElement()!
     }
-
+    
 }
