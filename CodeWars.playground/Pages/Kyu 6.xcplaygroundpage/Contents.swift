@@ -4,7 +4,8 @@ import XCTest
 
 let kyu6tests = [
     BouncingBallsTest.self,
-    FindTheMissingTermInAnArithmeticProgressionTest.self
+    FindTheMissingTermInAnArithmeticProgressionTest.self,
+    WhichAreInTest.self
 ]
 
 for test in kyu6tests {
